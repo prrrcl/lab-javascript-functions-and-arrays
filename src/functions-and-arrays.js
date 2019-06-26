@@ -20,14 +20,16 @@ var words = [
 ];
 
 function findLongestWord(array){
-  var longestWord = "";
+  if (array.length === 0) {
+    return undefined;
+  };
+  var longestWord = [];
   for(var i = 0; i <= array.length-1; i++){
-    console.log(array[i])
     if(array[i].length > longestWord.length){
       longestWord = array[i];
     }
-    return longestWord;
   }
+  return longestWord;
 }
 
 
@@ -45,10 +47,12 @@ function sumArray(array){
 }
 
 // Calculate the Average
-var sumNumberAverage = null;
+
 var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(array){
+  var sumNumberAverage = null;
+  
   if(array.length !== 0){
     for(var i = 0; i < array.length; i++){
       sumNumberAverage += array[i];
